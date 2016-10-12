@@ -200,6 +200,10 @@
             e.stopPropagation();
             $li.siblings('.custom-a11yselect-option:last').children('button').trigger('focus');
             break;
+          case escape:
+            e.preventDefault();
+            closeDropdown($(this).parents('.custom-a11yselect-menu'));
+            break;
           // tab key is disabled when focused on any option
           case tabKey:
             e.preventDefault();
@@ -311,12 +315,13 @@
       $menu.on('change',function() {
         var selectedText = $(this).find(':selected').text();
         $button.find('.custom-a11yselect-text').text(selectedText);
+        $button.trigger('focus');
       });
+      $button.on('click',function(e) {
+        e.preventDefault();
+        $menu.trigger('focus');
+      })
     }
-   $button.on('click',function(e) {
-    e.preventDefault();
-    $menu.trigger('focus');
-    });
     // sets a menu option to be selected
     function selectOption($option, updateOriginal) {
       var selectedOption = $option.attr('data-val');

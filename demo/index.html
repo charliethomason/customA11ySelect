@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>customA11ySelect.js Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <link href="demo.css" rel="stylesheet">
+    <link href="../css/customA11ySelect.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>customA11ySelect.js Demo</h1>
+        <div class="doc"><a href="https://github.com/charliethomason/customA11ySelect">Documentation</a></div>
+
+        <div class="example">
+            <h2>Example 1</h2>
+            <p>Normal &lt;select&gt; element</p>
+            <label for="example-1">Example 1:</label>
+            <select id="example-1">
+                <option value="" selected="selected">Select Size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <label>Code:</label>
+<pre>&lt;label for=&quot;example-1&quot;&gt;Example 1:&lt;/label&gt;
+&lt;select id=&quot;example-1&quot;&gt;
+  &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Select Size&lt;/option&gt;
+  &lt;option value=&quot;XS&quot;&gt;XS&lt;/option&gt;
+  &lt;option value=&quot;S&quot;&gt;S&lt;/option&gt;
+  &lt;option value=&quot;M&quot;&gt;M&lt;/option&gt;
+  &lt;option value=&quot;L&quot;&gt;L&lt;/option&gt;
+  &lt;option value=&quot;XL&quot;&gt;XL&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+        </div>
+
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../js/customA11ySelect.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('select').customA11ySelect();
+        });
+    </script>
+</body>
+</html>
